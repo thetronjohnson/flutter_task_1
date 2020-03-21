@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+<<<<<<< HEAD
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,6 +12,18 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: MyHomePage(title: 'Demo App'),
+=======
+ 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Counter',
+      theme: ThemeData(
+    
+        primarySwatch: Colors.red,
+      ),
+      home: MyHomePage(title: 'Counter'),
+>>>>>>> task_one
     );
   }
 }
@@ -18,7 +31,11 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> task_one
   final String title;
 
   @override
@@ -34,8 +51,16 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _decrementCounter() {
+    setState((){
+      _counter--;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
       appBar: AppBar(
         
@@ -45,6 +70,19 @@ class _MyHomePageState extends State<MyHomePage> {
         
         child:Column(
        
+=======
+   
+    return Scaffold(
+      appBar: AppBar(
+       
+        title: Text(widget.title),
+      ),
+      body: Center(
+       
+        child: Column(
+         
+          
+>>>>>>> task_one
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
@@ -58,10 +96,26 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         
       ),
+<<<<<<< HEAD
       
       
       
        // 
+=======
+     persistentFooterButtons: <Widget>[
+       RaisedButton(
+         onPressed:_incrementCounter,
+         color: Colors.red,
+         child: Text('Add'),
+      ),
+      RaisedButton(
+         onPressed:_decrementCounter,
+         color: Colors.red,
+         child: Text('Dec'),
+      )
+     ],
+      
+>>>>>>> task_one
     );
   }
 }
